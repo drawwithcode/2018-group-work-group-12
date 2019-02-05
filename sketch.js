@@ -1,9 +1,10 @@
-function preload(){
+function preload() {
   // put preload code here
 }
 
 function setup() {
-  // put setup code here
+  createCanvas(600, 600);
+  background(0);
 }
 
 function draw() {

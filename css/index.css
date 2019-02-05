@@ -1,0 +1,68 @@
+/* body {
+  margin: 0;
+  background: url(/assets/bground.jpg) no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+} */
+
+img {
+  display: inline-block;
+  margin: 100px auto;
+  -webkit-filter: brightness(100%);
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+img:hover {
+  -webkit-filter: brightness(130%);
+  color: white;
+  opacity: 0.8;
+}
+
+html {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+  margin-top: 35%;
+}
+
+body {
+  --color-text: #000;
+  --color-text-alt: #c0c0c0;
+  --color-bg: #fff;
+  --color-link: #c0c0c0;
+  --color-link-hover: #000;
+  --color-link-alt: #0b44fb;
+  --color-link-toc: #878787;
+  font-family: Futura, 'futura-pt', Arial, sans-serif;
+  min-height: 100vh;
+  color: #57585c;
+  color: var(--color-text);
+  background-color: #fff;
+  background-color: var(--color-bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 0.875rem;
+}
+
+.backicon {
+  display: block;
+  position: fixed;
+  margin: 0.5em;
+  padding: 0.5em;
+  fill: aquamarine;
+}
+
+.backicon:hover {
+  margin: 0.5em;
+  padding: 0.55em;
+  fill: beige;
+}

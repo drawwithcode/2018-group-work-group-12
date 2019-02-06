@@ -1,9 +1,12 @@
 var t;
 var myBground;
 
+function preload() {
+  myBground = loadImage('./assets/back.png');
+}
+
 function setup() {
   createCanvas(600, 600);
-  myBground = loadImage('./assets/back.png');
 }
 
 function draw() {
@@ -32,8 +35,8 @@ function flower(r, c, petalCount, circleCount, maxRad, minRad, frac, rot) {
       else rad = map(i, frac * circleCount, circleCount, maxRad, minRad);
       fill(
         lerpColor(
-          color(15 * t, 0, 255, 10),
-          color(10 * t + 185, 127 * (1 - t), 0, 10),
+          color(0, 152, 15 * t, 3),
+          color(0, 127 * (1 - t), 10 * t + 185, 3),
           i / circleCount
         )
       );

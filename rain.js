@@ -3,14 +3,14 @@ var d = [];
 function setup() {
   createCanvas(600, 600);
 
-  for (var i = 0; i < 350; i=i+2) {
+  for (var i = 0; i < 400; i=i+1) {
     d.push(new Drop(random(0, windowWidth), random(0, windowHeight), random(2, 4)));
   }
 }
 
 function draw() {
   noStroke();
-  fill(0, 20);
+  fill(color('#969B94'),20);
   rect(0, 0, width, height);
   for (var i = 0; i < d.length; i++) {
     d[i].displ();
@@ -37,7 +37,7 @@ function Drop(x, y, sp) {
     stroke(200);
     line(x1, y1, x2, y2);
 
-    if (y1 >= windowHeight - 100) {
+    if (y1 >= windowHeight - 10) {
       noFill();
       //stroke(200);
       noStroke();

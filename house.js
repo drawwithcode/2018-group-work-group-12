@@ -5,8 +5,7 @@ let txtHouse;
 let i;
 let angle = 0;
 
-
-function preload(){
+function preload() {
   house = loadModel('assets/houseMaterial/house.obj');
   skin = loadImage('assets/houseMaterial/yellow.jpg');
   typeTxt = loadImage('assets/houseMaterial/type.png');
@@ -19,7 +18,7 @@ function preload(){
 // }
 
 function setup() {
-  createCanvas(600,600, WEBGL);
+  createCanvas(600, 600, WEBGL);
   //centerCanvas();
 
   // txtHouse = createGraphics(200,200);
@@ -32,17 +31,16 @@ function setup() {
 
 function draw() {
   // put drawing code here
-   background('#6E9EAF');
+  background('#95abae');
   ambientLight(255);
-  i = map(mouseX, width,0, 0,85);
-  camera(0,0,(height/2)/tan(PI/6),i,0,0,0,1,0);
+  i = map(mouseX, width, 0, 0, 85);
+  camera(0, 0, height / 2 / tan(PI / 6), i, 0, 0, 0, 1, 0);
 
-
-  translate(200,150);
+  translate(200, 150);
   //pointlLight(120,255,255,mouseX - height / 2, mouseY - width / 2,1);
-  rotateX(PI/2);
+  rotateX(PI / 2);
   rotateY(0);
-  rotateZ(PI/3);
+  rotateZ(PI / 3);
   //normalMaterial();
   //specularMaterial(250);
   texture(skin);
@@ -50,15 +48,12 @@ function draw() {
   model(house);
 
   push();
-  translate(-300,-50);
-  rotateX(PI/2);
-  rotateY(PI*-1.5);
+  translate(-300, -50);
+  rotateX(PI / 2);
+  rotateY(PI * -1.5);
   rotateZ(PI);
   texture(typeTxt);
-  plane(300,300);
+  plane(300, 300);
   pop();
   //normalMaterial();
-
-
-
 }

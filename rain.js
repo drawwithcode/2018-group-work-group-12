@@ -1,17 +1,25 @@
 var d = [];
+var myBground;
 
+function preload() {
+  myBground = loadImage('./assets/back.png');
+}
 function setup() {
   createCanvas(600, 600);
+  myBground = loadImage('./assets/back.png');
 
-  for (var i = 0; i < 400; i=i+1) {
-    d.push(new Drop(random(0, windowWidth), random(0, windowHeight), random(2, 4)));
+  for (var i = 0; i < 400; i = i + 1) {
+    d.push(
+      new Drop(random(0, windowWidth), random(0, windowHeight), random(2, 4))
+    );
   }
 }
 
 function draw() {
+  image(myBground, 0, 0, 600, 600);
   noStroke();
-  fill(color('#969B94'),20);
-  rect(0, 0, width, height);
+  // fill(color('#969B94'), 20);
+  // rect(0, 0, width, height);
   for (var i = 0; i < d.length; i++) {
     d[i].displ();
   }
@@ -28,7 +36,7 @@ function Drop(x, y, sp) {
   this.displ = function() {
     var mx = 15;
     if (mx <= 0) {
-        mx = 0.05;
+      mx = 0.05;
     }
     y1 = y1 + s * mx;
     x2 = x1;
@@ -41,11 +49,10 @@ function Drop(x, y, sp) {
       noFill();
       //stroke(200);
       noStroke();
-      fill(0, 25,255);
+      fill(0, 25, 255);
       ellipse(x1, windowHeight - random(5, 45), random(20, 30), random(1, 4));
       x1 = random(0, windowWidth);
       y1 = -120;
     }
-  }
-
+  };
 }

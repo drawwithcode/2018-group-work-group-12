@@ -56,12 +56,11 @@ body {
   display: block;
   position: fixed;
   margin: 0.5em;
+  margin-left: 2em;
   padding: 0.5em;
-  fill: aquamarine;
+  fill: black;
 }
 
 .backicon:hover {
-  margin: 0.5em;
-  padding: 0.55em;
   fill: beige;
 }

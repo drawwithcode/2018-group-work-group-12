@@ -1,4 +1,9 @@
 var xstart, xnoise, ystart, ynoise;
+var myBground;
+
+function preload() {
+  myBground = loadImage('./assets/back.png');
+}
 
 function setup() {
   createCanvas(600, 600);
@@ -9,6 +14,7 @@ function setup() {
 
 function draw() {
   background(color('#9fc8cd'));
+  image(myBground, 0, 0, 600, 600);
   xstart += 0.1;
   ystart += 0.1;
   xnoise = xstart;
@@ -28,8 +34,8 @@ function drawPoint(x, y, noiseFactor) {
   translate(x, y);
   rotate(noiseFactor * radians(560));
   var edgeSize = noiseFactor * 45;
-  var grey = 170 + noiseFactor * 150;
-  var alph = 150 + noiseFactor * 120;
+  var grey = 170 + noiseFactor * 100;
+  var alph = 100 + noiseFactor * 80;
   noStroke();
   fill(grey, alph);
   ellipse(0, 0, edgeSize, edgeSize / 2);

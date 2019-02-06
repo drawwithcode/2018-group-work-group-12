@@ -10,7 +10,7 @@ function setup() {
 
 function draw() {
   noStroke();
-  fill(color('#969B94'),20);
+  fill(color('#7A7F79'));
   rect(0, 0, width, height);
   for (var i = 0; i < d.length; i++) {
     d[i].displ();

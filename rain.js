@@ -18,8 +18,6 @@ function setup() {
 function draw() {
   image(myBground, 0, 0, 600, 600);
   noStroke();
-  // fill(color('#969B94'), 20);
-  // rect(0, 0, width, height);
   for (var i = 0; i < d.length; i++) {
     d[i].displ();
   }

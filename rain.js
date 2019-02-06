@@ -1,7 +1,7 @@
 var d = [];
 
 function setup() {
-  createCanvas(windowWidth, windowHeight);
+  createCanvas(600, 600);
 
   for (var i = 0; i < 350; i=i+2) {
     d.push(new Drop(random(0, windowWidth), random(0, windowHeight), random(2, 4)));

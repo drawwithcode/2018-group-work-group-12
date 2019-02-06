@@ -4,11 +4,13 @@ let typeTxt;
 let txtHouse;
 let i;
 let angle = 0;
+var myBground;
 
 function preload() {
   house = loadModel('assets/houseMaterial/house.obj');
   skin = loadImage('assets/houseMaterial/yellow.jpg');
   typeTxt = loadImage('assets/houseMaterial/type.png');
+  myBground = loadImage('./assets/back.png');
 }
 
 // function centerCanvas() {
@@ -19,6 +21,7 @@ function preload() {
 
 function setup() {
   createCanvas(600, 600, WEBGL);
+
   //centerCanvas();
 
   // txtHouse = createGraphics(200,200);
@@ -31,7 +34,12 @@ function setup() {
 
 function draw() {
   // put drawing code here
-  background('#95abae');
+  background(184,187,175,20);
+  //image(myBackground, 0, 0, 600, 600);
+  // image(myBground, 0, 0, 600, 600);
+
+  // translate(-300, -300, 0);
+
   ambientLight(255);
   i = map(mouseX, width, 0, 0, 85);
   camera(0, 0, height / 2 / tan(PI / 6), i, 0, 0, 0, 1, 0);
@@ -56,4 +64,6 @@ function draw() {
   plane(300, 300);
   pop();
   //normalMaterial();
+
+
 }
